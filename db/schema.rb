@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160912174410) do
+ActiveRecord::Schema.define(version: 20160912222407) do
 
   create_table "documents", force: :cascade do |t|
     t.string   "title"
@@ -23,11 +23,6 @@ ActiveRecord::Schema.define(version: 20160912174410) do
     t.datetime "updated_at",  null: false
   end
 
-  create_table "founds", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "items", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -35,11 +30,9 @@ ActiveRecord::Schema.define(version: 20160912174410) do
     t.datetime "date"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "losts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "kind"
+    t.string   "titular"
+    t.boolean  "status"
   end
 
   create_table "people", force: :cascade do |t|
@@ -48,6 +41,7 @@ ActiveRecord::Schema.define(version: 20160912174410) do
     t.string   "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "item_id"
   end
 
 end
