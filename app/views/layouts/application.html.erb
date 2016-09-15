@@ -5,10 +5,38 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
+  <nav class="transparent">
+      <div class="nav-wrapper ">
+        <a href="#" class="brand-logo center indie-flower"> <span class= "blue-text text-lighten-1">Achados</span><span class="black-text"> & </span> <span class = "green-text text-lighten-1">Perdidos</span> </a>
+      </div>
+    </nav>
+
 
 <%= yield %>
+ <footer class="page-footer transparent">
+          <div class="container ">
+            <div class="row">
+              
+            </div>
+          </div>
+          <div class="footer-copyright light-green lighten-1 ">
+            <div class="container">
+            <div class="left">
+            <span class="grey-text text-lighten-4" href="#!">Desenvolvido por: </span>
+              
+                   <%=image_tag 'mandacaru2.png', class: ' responsive-image '%>
+            <span class="amatic-sc "> <b> M a n d a c a r u </b> <span class="black-text">T.I</span></span>
+                    </div>
 
+            
+            
+            </div>
+           
+          </div>
+        </footer>
+            
 </body>
 </html>
