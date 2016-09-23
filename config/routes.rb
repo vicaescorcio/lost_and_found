@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'items/add_item'
 
-  get 'items/remove_item'
+  get 'items/lost'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
