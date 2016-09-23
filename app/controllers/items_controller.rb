@@ -7,4 +7,12 @@ class ItemsController < ApplicationController
 
   def remove_item
   end
+
+  def lost
+  end
+
+  def found
+  end
+
+  
 end

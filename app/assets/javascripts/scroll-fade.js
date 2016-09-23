@@ -12,7 +12,7 @@ $(document).ready(function() {
             /* If the object is completely visible in the window, fade it it */
            
                 
-                $(this).animate({'opacity':'1'},1700);
+                $(this).animate({'opacity':'1'},2000);
                     
             
             

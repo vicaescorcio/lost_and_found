@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *= require materialize
+ *= require hover
  *= require_tree .
  *= require_self
  */
@@ -17,7 +18,11 @@
 @import "materialize";
 @import 'https://fonts.googleapis.com/css?family=Indie+Flower';
 @import 'https://fonts.googleapis.com/css?family=Amatic+SC';
+@import 'https://fonts.googleapis.com/css?family=Josefin+Sans:400,700';
 
+.josefin-bold{
+font-family: 'Josefin Sans', sans-serif;
+font-weight: bold;}
 
 .indie-flower {
 	font-family: 'Indie Flower', cursive;
@@ -31,7 +36,24 @@ font-family: 'Amatic SC', cursive;
 	font-size:20px;
 }
 .fs-title{
-	font-size: 60px;
+	font-size: 75px;
+}
+.shadow-blue{
+	text-shadow: 4px 4px 4px #0d47a1;
+  color:black;
+
+	
+}
+.shadow-green{
+	text-shadow: 4px 4px 4px #1b5e20;
+	color:black;
+
+
+}
+
+.shadow-black{
+	text-shadow: 4px 4px 4px black;
+	color:black;
 }
 
 .superior { 
@@ -39,11 +61,29 @@ width: 100%;
 height: 300px;
 
 }
+.botton{
+width:100%;
+height:600px;	
+}
+
 .parallax-container {
 	height:650px;
 	transition: height 2s;
 }
+
+.parallax{
+	 -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
 .hideme{
 	opacity:0;
+}
+
+.pad{
+		padding-top:80px;
+
 }
 

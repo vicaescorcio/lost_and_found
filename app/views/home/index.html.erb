@@ -1,18 +1,19 @@
- <div class="parallax-container">
+ <div class="parallax-container valign-wrapper">
     <div class="parallax"><%=image_tag 'olar1.jpg' %></div>
 
  
 
 
 
-<div class="row">
+<div class="row valign">
  
         <div class=" superior ">
-            <h5 class=" amatic-sc center-align fs-title  "> <b>Achados</b></h5>
+            <span class=" amatic-sc center-align fs-title shadow-blue   "> <b>A C H A D O S</b></span>
             <h4 class=" amatic-sc center-align fs-title  ">&</h4>
-            <h5 class=" amatic-sc center-align fs-title  ">Perdidos</h5>
+            <span class=" amatic-sc center-align fs-title  shadow-green "> <b>P E R D I D O S </b></span>
             <div class="center align">
-             <a href="#chico"><i id = 'arrow' class="large material-icons valign">keyboard_arrow_down</i></a></div>
+             <a href="#chico"><i id = 'arrow' class=" hvr-float shadow-black large material-icons valign  ">keyboard_arrow_down</i></a></div>
+
             
         </div>
         
@@ -21,8 +22,9 @@
 
  </div>
  <div class="divider"></div>
-<div class="row">
-    <div id="chico" class="scrollspy col  s12 l6 m12   ">
+ <div class="botton">
+<div class="row pad">
+    <div id="chico" class="  scrollspy col  s12 l6 m12   ">
         <div class="hideme center-align ">
             <%= link_to home_index_path, class:'waves-effect waves-light ' do %>
             <%=image_tag 'happy.png', class: 'center-align responsive-img circle '%>
@@ -47,5 +49,6 @@
             <%end%>
         </div>
     </div>
+</div>
 </div>
 

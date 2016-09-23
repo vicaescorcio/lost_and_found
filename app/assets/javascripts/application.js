@@ -13,8 +13,10 @@
 //= require turbolinks
 //= require jquery
 //= require materialize
-//= require scroll.js
+//= require scrollspy.js
 //= require scroll-fade.js
+//= require fadein.js
+//= require parallax.js
 //= require resize.js
 //= require_tree .
 
