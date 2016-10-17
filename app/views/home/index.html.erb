@@ -8,7 +8,7 @@
 <div class="row valign">
  
         <div class=" superior ">
-            <span class=" amatic-sc center-align fs-title shadow-blue   "> <b>A C H A D O S</b></span>
+            <span class=" amatic-sc center-align fs-title shadow-green   "> <b>A C H A D O S</b></span>
             <h4 class=" amatic-sc center-align fs-title  ">&</h4>
             <span class=" amatic-sc center-align fs-title  shadow-green "> <b>P E R D I D O S </b></span>
             <div class="center align">
@@ -26,12 +26,12 @@
 <div class="row pad">
     <div id="chico" class="  scrollspy col  s12 l6 m12   ">
         <div class="hideme center-align ">
-            <%= link_to home_index_path, class:'waves-effect waves-light ' do %>
-            <%=image_tag 'happy.png', class: 'center-align responsive-img circle '%>
+            <%= link_to root_path, class:'waves-effect waves-light ' do %>
+            <%=image_tag 'happy.png', class: 'center-align responsive-img  '%>
             <%end%>
         </div>
         <div class="hideme center-align">
-            <%= link_to home_index_path, class:'waves-effect waves-light btn-flat btn-large' do %>
+            <%= link_to root_path, class:'waves-effect waves-light btn-flat btn-large' do %>
             <h4> <span class="indie-flower"> <b>Achei !</b></span></h4>
             <%end%>
         </div>
@@ -39,12 +39,12 @@
     </div>
     <div class="  col s12 l6 m12 ">
         <div class=" hideme center-align">
-            <%= link_to items_show_path , class:'waves-effect waves-light' do %>
-            <%=image_tag 'sad.png', class: ' responsive-img circle'%>
+            <%= link_to perdeu_path , class:'waves-effect waves-light' do %>
+            <%=image_tag 'sad.png', class: ' responsive-img center-align'%>
             <%end%>
         </div>
         <div class=" hideme center-align">
-            <%= link_to items_show_path , class:'waves-effect waves-light btn-flat btn-large' do %>
+            <%= link_to perdeu_path , class:'waves-effect waves-light btn-flat btn-large' do %>
             <h4> <span class="indie-flower"> <b>Perdi !</b></span></h4>
             <%end%>
         </div>

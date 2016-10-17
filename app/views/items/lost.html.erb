@@ -1,35 +1,128 @@
 <div class="row">
-	<div class="col s12 m12 l6">
-		 <form class="col s12 m12 l12">
+
+
+	<div class="col s12 m12 l12">
+     <h3 class=" amatic-sc center-align"><b> Perdeu?!</b></h3>
+  
+  
+        
+     
+
+
+     
+    <%= form_for(@item, url: cadastrar_item_path, html:{ class:"  col s12 m12 l12"}) do |f| %>
+
+    
+
+
+     <div class="row">
+
+      
+      <div class="input-field col l6 m6 s12">
+        <i class="material-icons prefix">live_help</i>
+        <%= f.text_field :title, class: "validate", required:"" %> 
+        <%= f.label :title, "O QUÊ ?", class:"  indie-flower fss" %>
+      </div> 
+
+       <div class="input-field col l6 m6 s12">
+        <i class="material-icons prefix">location_on</i>
+        <%= f.text_field :local, class: "validate", id:" onde",required:"" %> 
+        <%= f.label :local, "ONDE ?", class:"indie-flower fss" %>
+       </div> 
+
+    </div>
+
       <div class="row">
-        <div class="input-field col s6">
-          <input placeholder="Placeholder" id="first_name" type="text" class="validate">
-          <label for="first_name">First Name</label>
+
+
+        <div class="input-field col l6 m6 s12">
+         <i class="material-icons prefix">mode_edit</i>
+        <%= f.text_area :description, class:"materialize-textarea",required:"" %>
+        <%= f.label :description, "COMO É ?", class: "indie-flower fss"%>
         </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate">
-          <label for="last_name">Last Name</label>
+
+
+        
+       <div class="input-field col l6 m6 s12">
+         <i class="material-icons prefix">event</i>
+      
+        <%= f.text_field :date, id:"calendar2", class:"campoData",required:"" %>
+        <%= f.label :date, "QUANDO ?", class: "indie-flower fss"%>
         </div>
+       
       </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input disabled value="I am not editable" id="disabled" type="text" class="validate">
-          <label for="disabled">Disabled</label>
+
+
+     <%= f.fields_for :person do |person_form| %>
+     <div class="row">
+        <div class="input-field col l6 m6 s12">
+         <i class="material-icons prefix">account_circle</i>
+        <%= person_form.text_field :name, class:"materialize-textarea", required:"" %>
+        <%= person_form.label :name, "DE QUEM É ?", class: "indie-flower fss"%>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password">Password</label>
+
+
+        
+       <div class="input-field col l6 m6 s12">
+        <i class="material-icons prefix">mail_outline</i>      
+        <%= person_form.email_field :email, class: "validate", required:"" %>
+        <%= person_form.label :email, "EMAIL DO DONO", class: "indie-flower fss"%>
         </div>
+     </div>
+     <div class="row">
+       <div class="input-field col l6 m6 s6">
+         <i class="material-icons prefix">call</i>
+         <%=person_form.text_field :phone, id: "campoPhone",class: "validate", required:""%>
+         <%=person_form.label :phone, "TELEFONE PARA CONTATO", class:"indie-flower fss"%>
+       </div>
+     </div>
+     <%end%>
+
+
+    
+      <div class="center-align">
+        <%= button_tag class:"waves-effect waves-teal btn-flat", method: :post do %>
+          <span class="indie-flower fss"> BOTA PARA ACHAR !</span>
+
+
+        <%end%>
       </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-      </div>
-    </form>
+      
+      
+
+
+     <%end%> 
+
+		
 	</div>
-	<div class="col s12 m12 l6"> </div>
+  <div class="col s12 m12 l12">
+     <h3 class=" amatic-sc center-align"><b> Já viu se tá por aqui ?</b></h3>
+     <div  class="pad2">
+       <table class="centered highlight responsive-table ">
+        <thead>
+          <tr>
+              <th class = "indie-flower"data-field="what">O QUÊ</th>
+              <th class = "indie-flower"data-field="how_is_it">COMO É</th>
+              <th class = "indie-flower"data-field="where">ONDE</th>
+              <th class = "indie-flower"data-field="when">QUANDO</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        <% @items.each do |item|%>
+          <tr>
+            <td class="raleway"><%=item.title%></td>
+            <td class="raleway"><%=item.description%></td>
+            <td class="raleway"><%=item.local%></td>
+            <td class="raleway"><%=item.date%></td>
+
+          </tr>
+          <%end%>
+        </tbody>
+      </table>
+      </div>
+  </div>
 </div>
+
+
+

@@ -10,7 +10,6 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //= require jquery_ujs
-//= require turbolinks
 //= require jquery
 //= require materialize
 //= require scrollspy.js
@@ -18,5 +17,10 @@
 //= require fadein.js
 //= require parallax.js
 //= require resize.js
+//= require datepicker.js
+//= require dhtmlxcalendar.js 
+//= require mask.js
+//= require date.mask.js
+//= require phone.mask.js 
 //= require_tree .
 
