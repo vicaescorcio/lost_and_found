@@ -37,7 +37,7 @@
 
         <div class="input-field col l6 m6 s12">
          <i class="material-icons prefix">mode_edit</i>
-        <%= f.text_area :description, class:"materialize-textarea",required:"" %>
+        <%= f.text_area :description, class:"materialize-textarea", required:"" %>
         <%= f.label :description, "COMO É ?", class: "indie-flower fss"%>
         </div>
 
@@ -75,20 +75,20 @@
          <%=person_form.text_field :phone, id: "campoPhone",class: "validate", required:""%>
          <%=person_form.label :phone, "TELEFONE PARA CONTATO", class:"indie-flower fss"%>
        </div>
-     </div>
+   
      <%end%>
 
 
     
-      <div class="center-align">
-        <%= button_tag class:"waves-effect waves-teal btn-flat", method: :post do %>
-          <span class="indie-flower fss"> BOTA PARA ACHAR !</span>
+      <div class="col s6 l6 m6 center-align">
+        <%= button_tag class:" hvr-float waves-effect waves-light btn-large black", method: :post do %>
+          <span class="indie-flower white-text fss"> BOTA PARA ACHAR !</span>
 
 
         <%end%>
       </div>
       
-      
+        </div>
 
 
      <%end%> 

@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
 
   def create
    @items =Item.all
-   @item = Item.new(item_params)
+   @item = Item.new(item_params, status:0)
 
    if @item.save
      redirect_to :action => 'lost'
